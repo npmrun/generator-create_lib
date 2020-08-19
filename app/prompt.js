@@ -16,7 +16,10 @@ const data = [
         name: "amd",
       },
       {
-        name: "es",
+        name: "esm",
+      },
+      {
+        name: "esm-browser",
       },
       {
         name: "cjs",
