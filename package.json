@@ -1,0 +1,24 @@
+{
+  "name": "@noderun/generator-create_lib",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^4.2.0"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "jest": "^26.1.0",
+    "mocha": "^6.2.2"
+  }
+}
