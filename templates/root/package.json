@@ -1,6 +1,6 @@
 {
   "name": "<%= who?(who+'/'):'@noderun/' %><%= name %>",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/<%= name %>.umd.js",
   "module": "dist/<%= name %>.esm.js",
