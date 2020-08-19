@@ -24,6 +24,7 @@
     "preserveConstEnums": false,
     // 编译过程中需要引入的库文件的列表
     "lib": ["dom", "esnext"],
+    "sourceMap": true,
     // 额外支持解构/forof等功能
     "downlevelIteration": true,
     // 此处设置为node,才能解析import xx from 'xx'

@@ -16,7 +16,7 @@ module.exports = (yo) => {
       ...this.answers,
       ...this._data
     };
-    this.destinationRoot("create_lib_"+this._data.projectName);
+    this.destinationRoot(this._data.projectName);
     copyTpl("root", "",placeholder);
   }.apply(yo);
 };
