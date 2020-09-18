@@ -79,6 +79,7 @@ function createOutput(options) {
       file: `dist/${options.filename}.cjs.js`,
       format: "cjs",
       exports: "auto",
+      banner: "#!/usr/bin/env node" // 提供命令行的可执行权限
     },
     // ES2015 Module 规范, 可用 `Webpack`, `Rollup` 加载
     esm: {
