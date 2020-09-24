@@ -18,5 +18,6 @@ module.exports = (yo) => {
     };
     this.destinationRoot(this._data.projectName);
     copyTpl("root", "",placeholder);
+    copyTpl("point/_gitignore", ".gitignore",placeholder);
   }.apply(yo);
 };
