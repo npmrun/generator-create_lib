@@ -44,7 +44,7 @@ function createPlugin() {
     },
   });
   const replacePlugin = replace({
-    __DEV__: isProd,
+    __DEV__: !isProd,
   });
   plugin = [sourcemaps(), commonjs(), tsPlugin, aliasPlugin, replacePlugin];
   return plugin;

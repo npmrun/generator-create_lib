@@ -1,41 +1,38 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "target": "ES5",
+    "esModuleInterop": true, // 使得导入的方式类似于es6的模式
+    "module": "ESNext", // 编译后输出的模块类型,UMD不支持rollup打包
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "preserve", // 制定jsx的输出类型
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
     // 不报告执行不到的代码错误。
     "allowUnreachableCode": true,
-    "strictNullChecks": true,
-    // 严格模式, 强烈建议开启
-    "strict": true,
-    "allowJs": true,
-    // 支持别名导入:
-    // import * as React from "react"
-    "esModuleInterop": true,
-    // 目标js的版本
-    "target": "ES5",
-    // 目标代码的模块结构版本
-    "module": "ESNext",
-    // 在表达式和声明上有隐含的 any类型时报错。
-    "noImplicitAny": true,
-    // "__extends"等函数
-    // 将以"import {__extends} from 'tslib'的形式导入
-    "importHelpers": true,
-    // 删除注释
-    "removeComments": true,
-    // 保留 const和 enum声明
-    "preserveConstEnums": false,
-    // 编译过程中需要引入的库文件的列表
-    "lib": ["dom", "esnext"],
-    "sourceMap": true,
-    // 额外支持解构/forof等功能
-    "downlevelIteration": true,
-    // 此处设置为node,才能解析import xx from 'xx'
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false, // 用于检查是否有定义了但是没有使用变量
+    "noUnusedParameters": false, // 用于检测是否在函数中没有使用的参数
+    "noImplicitReturns": true, // 用于检查函数是否有返回值
+    "noFallthroughCasesInSwitch": true, // 用于检查switch中是否有case没有使用break跳出switch
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "rootDir": ".",
-    "paths": {
+    "baseUrl": ".", // 用于设置解析非相对模块名称的基本目录
+    "rootDir": ".", // 来指定编译文件的根目录，编译器会在根目录查找入口文件
+    "paths": { // 用于设置模块名到基于baseUrl的路径映射
+      "*":["./node_modules/@types", "./types/*"],
       "@/*": ["src/*"]
     }
   },
-  // 限定包含src目录，其他目录的js文件不管辖
-  "include": ["src/*", "global.d.ts"],
+  "include": ["src/*", "types/global.d.ts"],
   "exclude": ["node_modules/**"]
 }

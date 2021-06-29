@@ -21,6 +21,7 @@
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-replace": "^2.3.3",
+    "@types/node": "^15.12.5", // 这里只是为了记录一些为什么要显式安装这个包，请删掉这个注释 // https://stackoverflow.com/questions/57331779/typescript-duplicate-identifier-iteratorresult
     "chalk": "^4.1.0",
     "dts-bundle": "^0.7.3",
     "execa": "^4.0.3",

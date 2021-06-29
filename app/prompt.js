@@ -25,7 +25,7 @@ const data = [
         name: "cjs",
       },
     ],
-  }
+  },
 ];
 
 // 用户输入选择，用于之后的文件限制输出
@@ -42,14 +42,12 @@ const inputProjectName = {
   },
 };
 
-module.exports = (yo) => {
-  return async function () {
-    if (!this._data.projectName) {
-      data.splice(0, 0, inputProjectName);
-    }
-    this.answers = await this.prompt(data);
-    if (this.answers.name) {
-      this._data.projectName = this.answers.name;
-    }
-  }.apply(yo);
+module.exports =  async function () {
+  if (!this._data.projectName) {
+    data.splice(0, 0, inputProjectName);
+  }
+  this.answers = await this.prompt(data);
+  if (this.answers.name) {
+    this._data.projectName = this.answers.name;
+  }
 };
