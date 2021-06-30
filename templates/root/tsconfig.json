@@ -30,9 +30,9 @@
     "rootDir": ".", // 来指定编译文件的根目录，编译器会在根目录查找入口文件
     "paths": { // 用于设置模块名到基于baseUrl的路径映射
       "*":["./node_modules/@types", "./types/*"],
-      "@/*": ["src/*"]
+      "@/*": ["source/*"]
     }
   },
-  "include": ["src/*", "types/global.d.ts"],
+  "include": ["source", "types"],
   "exclude": ["node_modules/**"]
 }
